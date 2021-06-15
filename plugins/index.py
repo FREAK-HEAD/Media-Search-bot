@@ -107,21 +107,6 @@ async def run(bot, message):
             await LIMIT.reply_text("Thats an invalid ID, It should be an integer.")
             continue
 
-    buttons=InlineKeyboardMarkup(
-        [
-            [
-                InlineKeyboardButton("All Messages", callback_data="all")
-            ],
-            [
-                InlineKeyboardButton("Document", callback_data="docs"),
-                InlineKeyboardButton("Photos", callback_data="photos")
-            ],
-            [
-                InlineKeyboardButton("Videos", callback_data="videos"),
-                InlineKeyboardButton("Audios", callback_data="audio")
-            ]
-        ]
- 
     except Exception as e:
         print(e)
         await m.edit(text=f"Error: {e}")
