@@ -70,43 +70,6 @@ async def run(bot, message):
                 await chat.reply_text("Wrong Channel ID")
                 continue
 
-            
-    else:
-        #global channel_type
-        channel_type="public"
-        channel_id = re.search(r"t.me.(.*)", channel)
-        #global channel_id_
-        channel_id_=channel_id.group(1)
-
-    while True:
-        try:
-            SKIP = await bot.ask(text = "Send me from where you want to start forwarding\nSend 0 for from beginning.", chat_id = message.from_user.id, filters=filters.text, timeout=30)
-            print(SKIP.text)
-        except TimeoutError:
-            await bot.send_message(message.from_user.id, "Error!!\n\nRequest timed out.\nRestart by using /index")
-            return
-        try:
-            global skip_no
-            skip_no=int(SKIP.text)
-            break
-        except:
-            await SKIP.reply_text("Thats an invalid ID, It should be an integer.")
-            continue
-    while True:
-        try:
-            LIMIT = await bot.ask(text = "Send me from Upto what extend(LIMIT) do you want to Index\nSend 0 for all messages.", chat_id = message.from_user.id, filters=filters.text, timeout=30)
-            print(LIMIT.text)
-        except TimeoutError:
-            await bot.send_message(message.from_user.id, "Error!!\n\nRequest timed out.\nRestart by using /index")
-            return
-        try:
-            global limit_no
-            limit_no=int(LIMIT.text)
-            break
-        except:
-            await LIMIT.reply_text("Thats an invalid ID, It should be an integer.")
-            continue
-
     except Exception as e:
         print(e)
         await m.edit(text=f"Error: {e}")
