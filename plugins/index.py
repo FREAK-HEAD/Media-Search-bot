@@ -4,7 +4,9 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from pyrogram.errors import FloodWait
 from pyrogram.errors.exceptions.bad_request_400 import InviteHashExpired, UserAlreadyParticipant
+from config import Config
 import re
+from bot import Bot
 from asyncio.exceptions import TimeoutError
 from database import save_data
 import logging
