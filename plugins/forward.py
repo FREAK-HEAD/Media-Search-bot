@@ -3,7 +3,7 @@ from pyrogram import Client, emoji, filters
 from database import get_search_results
 from database import Data
 from config import Config
-import asyncio
+import nest_asyncio
 from pyrogram.errors import FloodWait
 import random
 from pyrogram.errors.exceptions.bad_request_400 import FileReferenceEmpty, FileReferenceExpired, MediaEmpty
