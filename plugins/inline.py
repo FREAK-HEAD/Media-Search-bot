@@ -74,7 +74,7 @@ def get_reply_markup(username, query):
     url = 't.me/Reaper_OX'
     buttons = [[
         InlineKeyboardButton('Search again', switch_inline_query_current_chat=query),
-        InlineKeyboardButton('Share bot', url=url),
+        InlineKeyboardButton('Contact Owner', url=url),
     ]]
     return InlineKeyboardMarkup(buttons)
 
