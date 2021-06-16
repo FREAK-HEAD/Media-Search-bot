@@ -19,6 +19,11 @@
             "description": "Your bot token.",
             "value": ""
         },
+        "USERBOT_STRING_SESSION": {
+            "description": "User bot string session.",
+            "value": "",
+            "required": false
+        },
         "API_ID": {
             "description": "Get this value from https://my.telegram.org",
             "value": ""
@@ -40,6 +45,21 @@
             "value": "",
             "required": false
         },
+        "AUTH_CHANNEL": {
+            "description": "Username or ID of channel. Without subscribing this channel users cannot use bot.",
+            "value": "",
+            "required": false
+        },
+        "START_MSG": {
+            "description": "Welcome message for start command",
+            "value": "**Hi, I'm Media Search bot**\n\nHere you can search files in inline mode. Just press following buttons and start searching.",
+            "required": false
+        },
+        "INVITE_MSG": {
+            "description": "Auth channel invitation message",
+            "value": "Please join @.... to use this bot",
+            "required": false
+        },
         "USE_CAPTION_FILTER": {
             "description": "Whether bot should use captions to improve search results. (True False)",
             "value": "False",
@@ -56,11 +76,6 @@
         "COLLECTION_NAME": {
             "description": "Name of the collections. Defaults to Telegram_files. If you are using the same database, then use different collection name for each bot",
             "value": "Telegram_files",
-            "required": false
-        },
-        "MAX_RESULTS": {
-            "description": "Maximum limit for inline search results",
-            "value": "10",
             "required": false
         },
         "CACHE_TIME": {
