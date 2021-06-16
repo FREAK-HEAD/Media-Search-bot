@@ -11,7 +11,7 @@ class Config:
     DATABASE_NAME = os.environ.get("DATABASE_NAME","Cluster0")
     COLLECTION_NAME = os.environ.get('COLLECTION_NAME', 'Forward_data')
     SESSION = os.environ.get("SESSION", "Forward_Session")
-    TO_CHANNEL = int(os.environ.get("TO_CHANNEL", ""))
+    TO_CHANNEL = int(os.environ.get("TO_CHANNEL", "-1001180843317"))
     BOT_USERNAME= os.environ.get("BOT_USERNAME", None)
 
 
